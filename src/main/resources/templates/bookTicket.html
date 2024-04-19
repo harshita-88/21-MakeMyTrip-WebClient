@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bootstrap demo</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+	crossorigin="anonymous">
+</head>
+<body>
+	<div>
+		<font color="green">
+			<p th:text="${msg}"></p>
+		</font>
+		<form th:action="@{/ticket}" th:object="${p}" method="post">
+			<Table>
+
+				<tr>
+					<td>Name :</td>
+					<td><input type="text" th:field="*{name}" /></td>
+				</tr>
+				<tr>
+					<td>Email :</td>
+					<td><input type="text" th:field="*{email}" /></td>
+				</tr>
+				<tr>
+					<td>DOJ :</td>
+					<td><input type="text" th:field="*{doj}" /></td>
+				</tr>
+				<tr>
+					<td>to :</td>
+					<td><input type="text" th:field="*{to}" /></td>
+				</tr>
+				<tr>
+					<td>From :</td>
+					<td><input type="text" th:field="*{from}" /></td>
+				</tr>
+				<tr>
+					<td>Train No.:</td>
+					<td><input type="text" th:field="*{train_no}" /></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="submit" value="Book Ticket"
+						class="btn btn-primary" /></td>
+				</tr>
+
+
+
+			</Table>
+		</form>
+		<a href = "/" class = "btn btn-danger">View Ticket</a>
+	</div>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+		crossorigin="anonymous"></script>
+</body>
+</html>
